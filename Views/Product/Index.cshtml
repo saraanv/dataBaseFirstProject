@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Product Page";
+}
+
+@model IEnumerable<Product>
+
+<h2>Product Index</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PchangeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poldprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pnewprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrandId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PchangeDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Poldprice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pnewprice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BrandId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

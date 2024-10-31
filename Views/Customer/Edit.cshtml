@@ -1,0 +1,52 @@
+﻿@model Customer
+
+<h1>Edit Customer</h1>
+
+<form asp-action="Edit" asp-route-id="@Model.CustomerId" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="CustomerId" />
+
+    <div class="form-group">
+        <label asp-for="CustomerFName" class="control-label"></label>
+        <input asp-for="CustomerFName" class="form-control" />
+        <span asp-validation-for="CustomerFName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustomerLName" class="control-label"></label>
+        <input asp-for="CustomerLName" class="form-control" />
+        <span asp-validation-for="CustomerLName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address" class="control-label"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Phone" class="control-label"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Postalcode" class="control-label"></label>
+        <input asp-for="Postalcode" class="form-control" />
+        <span asp-validation-for="Postalcode" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CityId" class="control-label"></label>
+        <input asp-for="CityId" class="form-control" />
+        <span asp-validation-for="CityId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

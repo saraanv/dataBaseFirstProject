@@ -1,0 +1,47 @@
+﻿@model OrderTbl
+
+<h2>Delete Ordertbl</h2>
+
+<h3>Are you sure you want to delete this Ordertbl?</h3>
+<div>
+    <h4>OrderDtl Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsDelivered)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsDelivered)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CustomerId)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+    </dl>
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.OrderId" method="post">
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-default">Back to List</a>
+        </div>
+    </form>
+</div>

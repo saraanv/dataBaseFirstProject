@@ -1,0 +1,37 @@
+﻿@model OrderTbl
+
+<h2>Create OrderTbl</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="OrderDate" class="control-label"></label>
+        <input asp-for="OrderDate" class="form-control" />
+        <span asp-validation-for="OrderDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IsDelivered" class="control-label"></label>
+        <input asp-for="IsDelivered" class="form-control" />
+        <span asp-validation-for="IsDelivered" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustomerId" class="control-label"></label>
+        <input asp-for="CustomerId" class="form-control" />
+        <span asp-validation-for="CustomerId" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="Discount" class="control-label"></label>
+        <input asp-for="Discount" class="form-control" />
+        <span asp-validation-for="Discount" class="text-danger"></span>
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

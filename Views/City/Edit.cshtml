@@ -1,0 +1,17 @@
+﻿@model City
+
+<h1>Edit City</h1>
+
+<form asp-action="Edit" asp-route-id="@Model.CityId" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="CityId" />
+
+    <div class="form-group">
+        <label asp-for="CityName" class="control-label"></label>
+        <input asp-for="CityName" class="form-control" />
+        <span asp-validation-for="CityName" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
